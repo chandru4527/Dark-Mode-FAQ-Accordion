@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <title>Modern FAQ</title>
+</head>
+
+<body class="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-700 p-4">
+
+  <div class="w-96">
+    <h1 class="text-3xl font-bold text-white text-center mb-8 tracking-wide">
+      FAQ Section
+    </h1>
+
+    <div class="bg-slate-800 rounded-2xl shadow-2xl overflow-hidden">
+
+      <!-- Item -->
+      <div class="item border-b border-slate-700">
+        <div class="tittle flex justify-between items-center p-5 cursor-pointer group transition duration-300 hover:bg-slate-700">
+          <h2 class="text-blue-400 font-medium group-hover:text-blue-400  transition">
+            What is MERN Stack?
+          </h2>
+          <span class="icon text-2xl text-blue-400 transition-transform duration-300 group-hover:scale-125">
+            +
+          </span>
+        </div>
+        <div class="content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-700">
+          <p class="p-5 text-slate-300">
+             MERN stands for MongoDB, Express.js, React.js, and Node.js — a full-stack JavaScript framework.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="item border-b border-slate-700">
+        <div class="tittle flex justify-between items-center p-5 cursor-pointer group transition duration-300 hover:bg-slate-700">
+          <h2 class="text-blue-400 font-medium group-hover:text-blue-400 transition">
+            Why use React in MERN?
+          </h2>
+          <span class="icon text-2xl text-blue-400 transition-transform duration-300 group-hover:scale-125">
+            +
+          </span>
+        </div>
+        <div class="content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-700">
+          <p class="p-5 text-slate-300">
+            React helps build fast, dynamic, and reusable UI components with a virtual DOM.
+          </p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="item">
+        <div class="tittle flex justify-between items-center p-5 cursor-pointer group transition duration-300 hover:bg-slate-700">
+          <h2 class="text-blue-400 font-medium group-hover:text-blue-400 transition">
+            What is the role of Node.js?
+          </h2>
+          <span class="icon text-2xl text-blue-400 transition-transform duration-300 group-hover:scale-125">
+            +
+          </span>
+        </div>
+        <div class="content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-700">
+          <p class="p-5 text-slate-300">
+            Node.js runs JavaScript on the server side and handles backend logic and APIs.
+          </p>
+        </div>
+      </div>
+      <!-- Item -->
+      <div class="item">
+        <div class="tittle flex justify-between items-center p-5 cursor-pointer group transition duration-300 hover:bg-slate-700">
+          <h2 class="text-blue-400 font-medium group-hover:text-blue-400 transition">
+            What is the role of Node.js?
+          </h2>
+          <span class="icon text-2xl text-blue-400 transition-transform duration-300 group-hover:scale-125">
+            +
+          </span>
+        </div>
+        <div class="content max-h-0 overflow-hidden transition-all duration-500 ease-in-out bg-slate-700">
+          <p class="p-5 text-slate-300">
+            Node.js runs JavaScript on the server side and handles backend logic and APIs.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+  const tittles = document.querySelectorAll(".tittle");
+
+  tittles.forEach(tittle => {
+    tittle.addEventListener("click", (e) => {
+      const content = e.currentTarget.nextElementSibling;
+      const icon = e.currentTarget.querySelector(".icon");
+
+      content.classList.toggle("max-h-40");
+
+      icon.textContent = content.classList.contains("max-h-40") ? "−" : "+";
+    });
+  });
+</script>
+
+</body>
+</html>
